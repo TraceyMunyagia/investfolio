@@ -10,7 +10,7 @@ class DisplayAccount extends Component
     public $approved;
 
     public function mount(Approved $approved){
-        $approved = Approved::findOrFail($id);
+        $this ->approved = $approved;
 
     }
 

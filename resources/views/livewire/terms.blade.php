@@ -1,5 +1,4 @@
 <div>
-  <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-bs-theme="dark">
     <div class="card" data-bs-theme="dark">
         <div class="card-header" data-bs-theme="dark">
           Terms of contract
@@ -44,5 +43,7 @@
               </blockquote>
         </div>
       </div>
-  </html>
+      <div>
+        <a href="/investor/dashboard" class="btn btn-outline-primary btn-sm">Back</a>
+      </div>
 </div>

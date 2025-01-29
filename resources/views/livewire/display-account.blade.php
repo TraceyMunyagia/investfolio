@@ -1,31 +1,13 @@
-
-<<div>
-  <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-bs-theme="dark">
-      <div class="row" data-bs-theme="dark">
-      <div class="col-auto">
-      </div>
-      </div>
-      <livewire:flash-message/>
-       <table class="table table-bordered">
-       <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">AccountNumber</th>
-        <th scope="col">Pin</th>
-      </tr>
-    </thead>
-    <tbody>
-     @foreach ($approved as $approved )
-      <tr>
-        <th scope="row">{{$approved->id}}</th>
-        <td>{{$approved->accountno}}</td>
-        <td>{{$approved->pin}}</td>
-      </tr>
-      @endforeach
-    </tbody>
-  </table>
-  </html>
+<div class="card">
+  <div class="card-header">
+    Your Account Details
   </div>
-  
-  
+  <div class="card-body">
+    <p class="card-text">Account Number:{{$approved->accountno}}</p>
+    <p class="card-text">Pin:{{$approved->pin}}</p>
+    <a wire:navigate href="/change/pin" class="btn btn-outline-danger btn-sm">Change pin</a>
+    <a wire:navigate href="/investor/dashboard" class="btn btn-outline-primary btn-sm">Back</a>
+  </div>
+</div>
+
 

@@ -1,3 +1,5 @@
+<div>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-bs-theme="dark">
 <div class="card offset-3 col-6" data-bs-theme="dark">
   <div class="card-header">
     Login
@@ -24,7 +26,6 @@
   </div>
   <button type="submit" class="btn btn-success btn-sm">Login</button>
 </form>
-   <div class="mb-3">
-   Don't have an account? <button  wire:navigate href="/register" class="btn btn-success btn-sm">Register</button>
-  </div>
+</div>
+</html>
 </div>

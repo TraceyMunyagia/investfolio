@@ -3,10 +3,10 @@
 namespace App\Livewire;
 
 use Livewire\Component;
-use App\Models\Admin;
+use App\Models\User;
 use Hash;
 
-class AdminRegister extends Component
+class NewUser extends Component
 {
     public $name="";
     public $email= "";
@@ -14,7 +14,7 @@ class AdminRegister extends Component
 
     public function render()
     {
-        return view('livewire.admin-register');
+        return view('livewire.new-user');
     }
 
     public function save(){
@@ -24,10 +24,8 @@ class AdminRegister extends Component
             'password'=>'required|min:8|max:255',
             ]);
 
-
-            Admin::create($validated);
+            User ::create($validated);
             $this->reset();
-            session()->flash('success','Admin Created Successfully');
-            return $this->redirect('/admin/login',navigate:true);
+            return $this->redirect('/login',navigate:true);
     }
 }

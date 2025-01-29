@@ -1,5 +1,9 @@
-<<div>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-bs-theme="dark">
+<div>
+<div class="row">
+  <div class="col-auto">
+    <input wire:model.live.debounce.150ms="search" type="text" class="form-control" placeholder="search users">
+  </div>
+</div>
     <div class="row" data-bs-theme="dark">
     <div class="col-auto">
     </div>
@@ -19,25 +23,25 @@
     </tr>
   </thead>
   <tbody>
-   @foreach ($user as $user )
+   @foreach ($investor as $investor )
     <tr>
-      <th scope="row">{{$user->id}}</th>
-      <td>{{$user->surname}}</td>
-      <td>{{$user->firstname}}</td>
-      <td>{{$user->othernames}}</td>
-      <td>{{$user->email}}</td>
-      <td>{{$user->phone}}</td>
+      <th scope="row">{{$investor->id}}</th>
+      <td>{{$investor->surname}}</td>
+      <td>{{$investor->firstname}}</td>
+      <td>{{$investor->othernames}}</td>
+      <td>{{$investor->email}}</td>
+      <td>{{$investor->phone}}</td>
       <td>
-                @if ($user->national_id)
-                <a href="{{ asset('storage/app/public/uploads/4yicPZBMJx74VzYFPKqqjknmcMYz8lv4EBAECuYz.jpg' . $user->national_id) }}" class="btn btn-primary btn-sm" target="_blank">View File</a>
+                @if ($investor->national_id)
+                <a href="{{ asset('storage/app/public/uploads/4yicPZBMJx74VzYFPKqqjknmcMYz8lv4EBAECuYz.jpg' . $investor->national_id) }}" class="btn btn-primary btn-sm" target="_blank">View File</a>
 
                 @else
                     No file uploaded
                 @endif
             </td>
       <td>
-                @if ($user->kra_pin)
-                <a href="{{ asset('storage/app/public/uploads/4yicPZBMJx74VzYFPKqqjknmcMYz8lv4EBAECuYz.jpg' . $user->kra_pin) }}" class="btn btn-primary btn-sm" target="_blank">View File</a>
+                @if ($investor->kra_pin)
+                <a href="{{ asset('storage/app/public/uploads/4yicPZBMJx74VzYFPKqqjknmcMYz8lv4EBAECuYz.jpg' . $investor->kra_pin) }}" class="btn btn-primary btn-sm" target="_blank">View File</a>
 
                 @else
                     No file uploaded
@@ -47,6 +51,8 @@
     @endforeach
   </tbody>
 </table>
-</html>
+<div>
+  <a href="/admin/dashboard" class="btn btn-outline-primary btn-sm">Back</a>
+</div>
 </div>
 

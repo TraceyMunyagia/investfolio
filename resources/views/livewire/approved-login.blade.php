@@ -2,7 +2,7 @@
         <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-bs-theme="dark">
         <div class="card offset-3 col-6" data-bs-theme="dark">
           <div class="card-header">
-            Login
+            Account Login
           </div>
           <div class="card-body">
             <form wire:submit="loginApproved">
@@ -17,14 +17,14 @@
           </div>
            <div class="mb-3">
             <label for="exampleInputPin" class="form-label">Pin</label>
-            <input wire:model="pin" type="number" class="form-control" id="exampleInputPin">
+            <input wire:model="pin" type="password" class="form-control" id="exampleInputPin">
                <div>
             @error('Pin')
               <span class="text-danger">{{$message}}</span>
             @enderror
             </div>
           </div>
-          <button type="submit" class="btn btn-success btn-sm">Login</button>
+          <button type="submit" class="btn btn-outline-success btn-sm">Login</button>
         </form>
         </div>
         </html>

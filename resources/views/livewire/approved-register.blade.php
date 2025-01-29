@@ -1,8 +1,6 @@
-<div>
-        <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-bs-theme="dark">
-        <div class="card offset-3 col-6" data-bs-theme="dark">
+<div class="card offset-3 col-6" data-bs-theme="dark">
           <div class="card-header">
-            Assign Account
+            Assign Account Details
           </div>
           <div class="card-body">
             <form wire:submit="Store">
@@ -24,9 +22,8 @@
             @enderror
             </div>
           </div>
-          <button type="submit" class="btn btn-success btn-sm">Submit</button>
+          <button type="submit" class="btn btn-outline-success btn-sm">Submit</button>
         </form>
         </div>
-        </html>
         </div>
 

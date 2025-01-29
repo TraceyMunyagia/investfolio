@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create("deposit", function (Blueprint $table) {
             $table->id();
             $table->string('accountno');
-            $table->integer('pin');
             $table->integer('amount');
             $table->rememberToken();
             $table->timestamps();

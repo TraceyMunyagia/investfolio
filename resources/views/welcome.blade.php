@@ -57,12 +57,11 @@
                         <span>Age Requirement: Must be 18 years or older</span>
                         <span>KRA PIN Certificate: A valid Kenya Revenue Authority (KRA) PIN certificate is mandatory.</span>
                         <span>Deposit Amount: A minimum initial deposit of 50,000 Kenyan shillings is required.</span>
-                        <span><a href="/register">Register Here.</a></span>
+                        <span><a href="/new/user">Register Here.</a></span>
                         <span>Once you have registered, we will approve your application and contact you via email.</span>
                         </p>
                     </div>
                 </div>
-                <img class="img-fluid" src="assets/img/inv 1.jpg" alt="..." />
             </div>
         </section>
         <!-- Projects-->
@@ -73,34 +72,20 @@
                     <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/inv 1.jpg" alt="..." /></div>
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
-                            <h4>Shoreline</h4>
-                            <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
+                            <h4>Mission</h4>
+                            <p class="text-black-50 mb-0">"To empower businesses and individuals with innovative financial solutions, strategic advisory, and capital market expertise, fostering sustainable growth and long-term value creation."</p>
                         </div>
                     </div>
                 </div>
                 <!-- Project One Row-->
                 <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-01.jpg" alt="..." /></div>
+                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/inv 3.jpg" alt="..." /></div>
                     <div class="col-lg-6">
                         <div class="bg-black text-center h-100 project">
                             <div class="d-flex h-100">
                                 <div class="project-text w-100 my-auto text-center text-lg-left">
-                                    <h4 class="text-white">Misty</h4>
-                                    <p class="mb-0 text-white-50">An example of where you can put an image of a project, or anything else, along with a description.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project Two Row-->
-                <div class="row gx-0 justify-content-center">
-                    <div class="col-lg-6"><img class="img-fluid" src="assets/img/demo-image-02.jpg" alt="..." /></div>
-                    <div class="col-lg-6 order-lg-first">
-                        <div class="bg-black text-center h-100 project">
-                            <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center text-lg-right">
-                                    <h4 class="text-white">Mountains</h4>
-                                    <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well!</p>
+                                    <h4 class="text-white">Vision</h4>
+                                    <p class="mb-0 text-white-50">"To be the leading global investment bank, recognized for excellence, integrity, and innovation, driving economic prosperity and shaping the future of finance."</p>
                                 </div>
                             </div>
                         </div>
@@ -118,7 +103,7 @@
                                 <i class="fas fa-map-marked-alt text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0">Address</h4>
                                 <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50">4923 Market Street, Orlando FL</div>
+                                <div class="small text-black-50">Nairobi,Kenya</div>
                             </div>
                         </div>
                     </div>
@@ -128,7 +113,7 @@
                                 <i class="fas fa-envelope text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0">Email</h4>
                                 <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50"><a href="#!">hello@yourdomain.com</a></div>
+                                <div class="small text-black-50"><a href="#!">investchamp@gmail.com</a></div>
                             </div>
                         </div>
                     </div>
@@ -138,7 +123,7 @@
                                 <i class="fas fa-mobile-alt text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0">Phone</h4>
                                 <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50">+1 (555) 902-8832</div>
+                                <div class="small text-black-50">+254786213131</div>
                             </div>
                         </div>
                     </div>
@@ -151,7 +136,7 @@
             </div>
         </section>
         <!-- Footer-->
-        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; Your Website 2023</div></footer>
+        <footer class="footer bg-black small text-center text-white-50"><div class="container px-4 px-lg-5">Copyright &copy; InvestChamp</div></footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->

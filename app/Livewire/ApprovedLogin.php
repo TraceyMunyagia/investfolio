@@ -3,8 +3,7 @@
 namespace App\Livewire;
 
 use Livewire\Component;
-use Request;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class ApprovedLogin extends Component
 {
@@ -18,17 +17,19 @@ class ApprovedLogin extends Component
     public function loginApproved()
     {
         $validated = $this->validate([
-            'accountno'=> 'required|email|max:255',
+            'accountno'=> 'required|max:255',
             'pin'=> 'required|max:8',
         ]);
 
-        if(Auth::attempt([
+
+        if (Auth::attempt([
             'accountno' => $this->accountno,
             'pin' => $this->pin
-             ]));
+        ]));
               
-             return redirect()->to('/user/dashboard'); 
+
+        return redirect()->to('/investor/dashboard');  
     
 
-   }
+                 }
 }

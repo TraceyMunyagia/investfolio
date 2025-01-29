@@ -2,10 +2,10 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" data-bs-theme="dark">
 <div class="card offset-3 col-6" data-bs-theme="dark">
   <div class="card-header">
-    Register 
+    Enter Your Details
   </div>
   <div class="card-body">
-    <form wire:submit="storeUser">
+    <form wire:submit="storeInvestor">
     <div class="mb-3">
     <label for="exampleInputSurname" class="form-label">Surname</label>
     <input wire:model="surname" type="text" class="form-control" id="exampleInputSurname" aria-describedby="emailHelp">
@@ -60,7 +60,8 @@
     @enderror
     </div>
     @if ($national_id)
-     <img class="rounded w-1 h-1 mt-1 block" src="{{ $national_id->temporaryUrl() }}" alt="";
+    <img class="mb-2 img-fluid" src="{{ $national_id->temporaryUrl() }}" alt="" style="width: 100px; height: auto;">
+
     @endif
 </div>
 <div class="mb-3">
@@ -72,13 +73,13 @@
     @enderror
     </div>
     @if ($kra_pin)
-     <img class="rounded w-1 h-1 mt-1 block" src="{{ $kra_pin->temporaryUrl() }}" alt="";
+    <img class="mb-2 img-fluid" src="{{ $kra_pin->temporaryUrl() }}" alt="" style="width: 100px; height: auto;">
     @endif
 </div>
-  <button type="submit" class="btn btn-success btn-sm btn-center">Submit</button>
+  <button type="submit" class="btn btn-outline-success btn-sm btn-center">Submit</button>
   <div>
     <p>Already an Investor?</p>
-    <button wire:navigate href="/approved/login" class="btn btn-secondary btn-sm">Login</button>
+    <button wire:navigate href="/approved/login" class="btn btn-outline-warning btn-sm">Login</button>
   </div>
 </form>
 </div>

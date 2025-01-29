@@ -5,7 +5,7 @@ namespace App\Livewire;
 
 use Auth;
 use Livewire\Component;
-use App\Models\User;
+use App\Models\Investor;
 use Livewire\WithFileUploads;
 
 
@@ -22,7 +22,7 @@ class Register extends Component
     public $kra_pin;
 
 
-    public function storeUser(){
+    public function storeInvestor(){
     $validated = $this->validate([
     'surname' => 'required|max:255',
     'firstname' => 'required|max:255',
@@ -34,14 +34,14 @@ class Register extends Component
 ]);
 
 if ($this->national_id){
-$this->national_id->store('uploads', 'public');
+$this->national_id->store('national_id');
 }
 
 if ($this->kra_pin){
-    $validated['kra_pin']=$this->national_id->store('uploads', 'public');
+    $validated['kra_pin']=$this->national_id->store('kra_pin');
     }
 
-        $user = User::create([
+        $investor = Investor::create([
                 'surname' => $this->surname,
                 'firstname' => $this->firstname,
                 'othernames' => $this->othernames,
@@ -51,14 +51,17 @@ if ($this->kra_pin){
                 'kra_pin' => $this->kra_pin ? $this->kra_pin->store('uploads/kra_pins') : null, 
         ]);
 
-        Auth::login($user);
-        session()->flash('success','Registration Successful');
+       
         return $this->redirect('/waiting',navigate:true);
 
     }
 
     public function render()
     {
+        if (Auth::user()->is_admin) {
+            return response('Unauthorized.',401);
+    
+        }
         return view('livewire.register');
     }
 
