@@ -7,6 +7,8 @@ use App\Models\Contract;
 
 class ContractAgreement extends Component
 {
+
+    public $accountid;
     public $accountno;
 
     public $start;
@@ -17,6 +19,7 @@ class ContractAgreement extends Component
 
     public function Store(){
         $validated = $this->validate([
+            'accountid'=> 'required|max:255',
             'accountno'=> 'required|max:255',
             'start'=>'required|max:255',
             'end'=>'required|max:255',

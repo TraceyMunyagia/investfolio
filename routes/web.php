@@ -4,11 +4,13 @@ use App\Livewire\AdminDashboard;
 use App\Livewire\ApprovedRegister;
 use App\Livewire\ApprovedLogin;
 use App\Livewire\ChangePin;
+use App\Livewire\ChooseInvestment;
 use App\Livewire\ContractAgreement;
 use App\Livewire\Customers;
 use App\Livewire\CreateCustomer;
 use App\Livewire\DisplayDeposit;
 use App\Livewire\DisplayInstallment;
+use App\Livewire\Investments;
 use App\Livewire\InvestorDashboard;
 use App\Livewire\MakeDeposit;
 use App\Livewire\DisplayAccount;
@@ -21,12 +23,13 @@ use App\Livewire\PendingApproval;
 use App\Livewire\ViewCustomer;
 use App\Livewire\EditCustomer;
 use App\Livewire\Register;
+use App\Livewire\Send;
+use App\Livewire\SendEmail;
 use App\Livewire\Terms;
 use App\Livewire\Login;
+use App\Livewire\ViewInvestments;
 use App\Livewire\Waiting;
 use App\Livewire\Payment;
-use App\Models\Admin;
-use App\Mail\Email;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Mail;
 
@@ -36,9 +39,6 @@ Route::get('/', function () {
 Route::get('/mail', function () {
     return view('mail.welcome');
 });
-
-
-
 
 
 Route::middleware('auth')->group(function(){
@@ -68,5 +68,11 @@ Route::get('/display/deposit', DisplayDeposit::class);
 Route::get('/display/installment', DisplayInstallment::class);
 Route::get('/contract', ContractAgreement::class);
 Route::get('/display/contract', DisplayContract::class);
+Route::get('/send-email', SendEmail::class)->name('send.email');
+Route::get('/send', Send::class);
+Route::get('/investments', Investments::class);
+Route::get('/choose/investment', ChooseInvestment::class);
+Route::get('/view/investments', ViewInvestments::class);
+
 
 

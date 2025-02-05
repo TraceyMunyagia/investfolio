@@ -7,15 +7,23 @@ use Livewire\Component;
 
 class DisplayAccount extends Component
 {
+
+
     public $approved;
 
+
+
     public function mount(Approved $approved){
-        $this ->approved = $approved;
+        $this->approved= $approved;
+
 
     }
 
     public function render()
     {
-        return view('livewire.display-account');
+        return view('livewire.display-account',[
+            'approved'=>$this->approved
+
+            ]);
     }
 }

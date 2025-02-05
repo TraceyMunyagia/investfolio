@@ -38,6 +38,10 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 View Account
                             </a>
+                            <a class="nav-link" href="/investments">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Investments
+                            </a>
                         </div>
                     </div>
                 </nav>

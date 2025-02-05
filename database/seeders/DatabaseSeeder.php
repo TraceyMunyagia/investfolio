@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Investment;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -21,5 +22,7 @@ class DatabaseSeeder extends Seeder
             'password'=> bcrypt('2025admin'),
             'is_admin'=> true,
         ]);
+          
+
     }
 }

@@ -23,7 +23,6 @@ class ChangePin extends Component
             'pin'=> 'required|max:4',
             ]);
 
-            
             $this->approved->update( $validated);
             session()->flash('success','Pin changed Successfully');
             return $this->redirect('/approved/login',navigate:true);

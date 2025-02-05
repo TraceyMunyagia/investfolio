@@ -8,5 +8,5 @@ class Installment extends Model
 {
     protected $table = "Installment";
 
-    protected $fillable = ['accountno','amount','month'];
+    protected $fillable = ['accountid','accountno','amount','month'];
 }

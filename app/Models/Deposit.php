@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Deposit extends Model
 {
     protected $table = "deposit";
-    protected $fillable = ['accountno','amount'];
+    protected $fillable = ['accountid','accountno','amount'];
 }

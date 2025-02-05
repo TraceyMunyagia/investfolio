@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Contract extends Model
 {
     protected $table = "contract";
-    protected $fillable = ['accountno','start','end','amount'];
+    protected $fillable = ['accountid','accountno','start','end','amount'];
 }

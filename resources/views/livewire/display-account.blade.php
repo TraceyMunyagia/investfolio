@@ -3,11 +3,13 @@
     Your Account Details
   </div>
   <div class="card-body">
-    <p class="card-text">Account Number:{{$approved->accountno}}</p>
-    <p class="card-text">Pin:{{$approved->pin}}</p>
-    <a wire:navigate href="/change/pin" class="btn btn-outline-danger btn-sm">Change pin</a>
+    @if ($approved)
+        <p class="card-text"><strong>Account Number:</strong> {{ $approved->accountno }}</p>
+        <p class="card-text"><strong>Pin:</strong> {{ $approved->pin }}</p>
+    @else
+        <p class="text-danger">No approved account found.</p>
+    @endif
+    <a wire:navigate href="/change/pin" class="btn btn-outline-danger btn-sm">Change Pin</a>
     <a wire:navigate href="/investor/dashboard" class="btn btn-outline-primary btn-sm">Back</a>
   </div>
 </div>
-
-

@@ -7,6 +7,7 @@ use App\Models\Installment;
 
 class MakeInstallment extends Component
 {
+    public $accountid;
     public $accountno;
 
     public $amount;
@@ -14,6 +15,7 @@ class MakeInstallment extends Component
     public $month;
     public function Makeinstallment(){
         $validated = $this->validate([
+            'accountid'=>'required|max:255',
             'accountno'=> 'required|max:255',
             'amount'=>'required',
             'month'=>'required|max:255',

@@ -11,18 +11,14 @@ class PendingApproval extends Component
 
     public $search = '';  
 
+
     public $investor=[];
 
-    public function searchInvestors()
-    {
-        $this->investors = Investor::where('email', 'like', '%' . $this->search . '%')
-                                    ->where('status', 'pending_approval') 
-                                    ->get();
-    }
 
     public function mount(){
         $this->investor= Investor::all();
     }
+
 
     public function deleteinvestor(Investor $investor){
         $investor->delete();
@@ -30,9 +26,14 @@ class PendingApproval extends Component
         return $this->redirect('/pending/approval',navigate:true);
 
     }
-    public function Approveinvestor(){
-        return $this->redirect('/approved/register',navigate:true);
+    public function Approveinvestor(Investor $investor){
+        $investor->status = 0;
+        $investor->save();
+        $investor->delete();
+        session()->flash('success','User Approved and Deleted from Pending List Successfully');
+        return $this->redirect('/approved/register', navigate:true);
     }
+
     public function render()
     {
         if(! $this->search){

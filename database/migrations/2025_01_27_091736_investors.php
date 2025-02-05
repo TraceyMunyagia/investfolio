@@ -20,7 +20,8 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->integer('phone')->unsigned()->nullable();
             $table->string('national_id')->nullable(); 
-            $table->string('kra_pin')->nullable();  
+            $table->string('kra_pin')->nullable();
+            $table->boolean('status')->default(0);
             $table->rememberToken();
             $table->timestamps();
     });

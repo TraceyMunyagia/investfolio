@@ -18,11 +18,7 @@ class DisplayUsers extends Component
              
     public function render()
     {
-        if(! $this->search){
-            $this->investors=Investor::all();
-        }else{
-            $this->investor=Investor::where('surname','like','%'.$this->search.'%')->get();
-        }
+       
         return view('livewire.display-users');
     }
 }

@@ -13,7 +13,7 @@
     <body class="sb-nav-fixed" data-bs-theme="dark">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark" data-bs-theme="dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.html">Invest Champ</a>
+            <a class="navbar-brand ps-3" href="#">Invest Champ</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -36,6 +36,7 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu" data-bs-theme="dark">
                         <div class="nav">
+                            <div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Payments
@@ -47,9 +48,23 @@
                                     <a class="nav-link" href="/display/installment">Installments</a>
                                 </nav>
                             </div>
-                            <a class="nav-link" href="/display/users">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                            </div>
+                            <div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Investors
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="/display/users">Investors</a>
+                                    <a class="nav-link" href="/view/investments">Investments</a>
+                                </nav>
+                            </div>
+                            </div>
+                            <a class="nav-link" href="/send">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Send Email
                             </a>
                         </div>
                     </div>

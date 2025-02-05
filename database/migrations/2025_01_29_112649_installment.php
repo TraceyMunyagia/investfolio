@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create("installment", function (Blueprint $table) {
             $table->id();
+            $table->string('accountid');
             $table->string('accountno');
             $table->integer('amount');
             $table->string('month');
